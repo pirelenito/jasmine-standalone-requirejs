@@ -1,6 +1,10 @@
 var require = {
   baseUrl: 'src',
 
+  // bust cache on development
+  // should be removed for deployed code
+  urlArgs: "bust=" +  (new Date()).getTime(),
+
   paths: {
     'spec': '../spec',
 
