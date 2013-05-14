@@ -63,10 +63,6 @@ function (jasmine) {
 
 Finally, we setup RequireJS to use [shim](http://requirejs.org/docs/api.html#config-shim) to load Jasmine.
 
-We are also adding a configuration to bust cache. This should only be used on development, so be sure to remove on deployment.
-
-Example:
-
 ```javascript
 var require = {
   baseUrl: 'src',
@@ -91,6 +87,8 @@ var require = {
   }
 };
 ```
+
+**Note on caching**: We are also adding a `urlArgs` configuration to bust cache. This should only be used on development, so be sure to remove on deployment.
 
 ## The SpecRunner
 
@@ -139,3 +137,11 @@ Which leaves only the RequireJS code back on the SpecRunner.html file:
 </body>
 </html>
 ```
+
+## Put together by
+
+[Paulo Ragonha](https://github.com/pirelenito)
+
+## Inspired by
+
+Made with great inspiration from [Testing Backbone + RequireJS Applications with Jasmine](http://kilon.org/blog/2012/08/testing-backbone-requirejs-applications-with-jasmine/) by [Uzi Kilon](https://github.com/uzikilon).
